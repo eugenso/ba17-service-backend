@@ -8,12 +8,15 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 @RestController
 @EnableAutoConfiguration
 public class ApplicationController {
 
 
-    private static WebThesaurusDatastructure dt;
+    private static DTHelper dt;
 
 
     @RequestMapping("/expansions")
@@ -59,9 +62,12 @@ public class ApplicationController {
      * @param args execution arguments
      */
     public static void main(String[] args) {
-        dt = new WebThesaurusDatastructure("resources/conf_web_deNews_trigram.xml");
-        dt.connect();
+
+
+        dt = new DTHelper("conf_web_deNews_trigram.xml");
         SpringApplication.run(ApplicationController.class, args);
     }
+
+
 
 }

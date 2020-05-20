@@ -1,4 +1,4 @@
-# ba-service-backend
+# Service Backend based on Spring Boot
 
 This project contains a web service based on the Spring Boot framework.
 It features a RESTful endpoint that can retrieve word expansions.
